@@ -4,7 +4,7 @@ import { Product } from "../entities/product.entity";
 export class createProductdto{
     @IsNotEmpty()
     @IsNumber()
-    id: number;
+    id?: number;
 
     @IsString()
     @IsNotEmpty()

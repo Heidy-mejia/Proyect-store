@@ -4,7 +4,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 export class Product{
 
     @PrimaryGeneratedColumn({type:'int4'})
-    id: number;
+    id?: number;
     
 
     @Column({type: 'varchar', length:80, nullable: false})
