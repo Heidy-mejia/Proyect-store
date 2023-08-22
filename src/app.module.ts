@@ -2,10 +2,12 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MarcasModule } from './marcas/marcas.module';
-import { ModelsModule } from './models/models.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductsModule } from './products/product.module';
 import { UsersModule } from './users/users.module';
+
+
+
 
 
 
@@ -30,7 +32,9 @@ import { UsersModule } from './users/users.module';
     MarcasModule,
     ProductsModule,
     UsersModule,
-    ModelsModule,
+    
+    
+   
   ],
   controllers: [AppController],
   providers: [AppService],

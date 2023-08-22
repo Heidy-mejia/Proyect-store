@@ -20,10 +20,22 @@ export class productsservice{
         return product;
     }
     //Encontrar un registro
-    findOne(id: number){
-        return this.productRepo.findOneBy({id})
-    }
+    //findOne(id: number){
+        //return this.productRepo.findOneBy({id})
+   // }
     //mostrar todos los registros
+    findOne (id:number) {
+        return  this.productRepo. findOne({
+            where:{id},
+            relations:{
+                autor:true,
+            }
+        })
+
+    }
+
+
+
     findAll(){
         return   this.productRepo.find({
             order: {id: 'ASC'},
