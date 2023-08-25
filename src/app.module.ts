@@ -5,6 +5,7 @@ import { MarcasModule } from './marcas/marcas.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductsModule } from './products/product.module';
 import { UsersModule } from './users/users.module';
+import { FilesModule } from './files/files.module';
 
 
 
@@ -32,6 +33,9 @@ import { UsersModule } from './users/users.module';
     MarcasModule,
     ProductsModule,
     UsersModule,
+    FilesModule,
+    
+
     
     
    
