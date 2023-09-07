@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductsModule } from './products/product.module';
 import { UsersModule } from './users/users.module';
 import { FilesModule } from './files/files.module';
+import { FilesPdfModule } from './filesPDF/pdfFiles.module';
 
 
 
@@ -34,6 +35,8 @@ import { FilesModule } from './files/files.module';
     ProductsModule,
     UsersModule,
     FilesModule,
+    FilesPdfModule,
+    
     
 
     
