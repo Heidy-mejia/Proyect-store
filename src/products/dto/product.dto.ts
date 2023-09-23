@@ -1,4 +1,4 @@
-import { IsDateString, IsNotEmpty, IsNumber, IsOptional, IsString, MaxLength } from "class-validator";
+import { IsArray, IsDateString, IsNotEmpty, IsNumber, IsOptional, IsString, MaxLength } from "class-validator";
 import { Product } from "../entities/product.entity";
 
 export class createProductdto{
@@ -35,6 +35,11 @@ export class createProductdto{
     @IsDateString()
     @IsOptional()
     categoria_id: number;
+
+    @IsArray({each: true})
+    @IsString()
+    @IsOptional()
+    images?: string[];
 
 
 

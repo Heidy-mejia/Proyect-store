@@ -1,5 +1,6 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { User } from '../../users/entities/user.entity';
+import { productImage } from "./product.image.entity";
 
 @Entity()
 export class Product{
@@ -43,6 +44,10 @@ export class Product{
 
     })
     autor: User;
+    @OneToMany(() => productImage, (productImage) =>productImage.product,{
+        cascade:true
+    })
+    images?:productImage[];
 
 
 }
